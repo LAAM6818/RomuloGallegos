@@ -38,7 +38,6 @@
             lblComplejoEducativo = new Label();
             picFondoVinotinto = new PictureBox();
             lblPortal = new Label();
-            lblBienvenidos = new Label();
             lblMensaje = new Label();
             lblUsuario = new Label();
             lblContraseña = new Label();
@@ -49,6 +48,7 @@
             linkLabelOlvidoSuContraseña = new LinkLabel();
             btnIniciarSesion = new Krypton.Toolkit.KryptonButton();
             picCerrar = new PictureBox();
+            lblBienvenido = new Label();
             pnlPic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picFondoVinotinto).BeginInit();
@@ -158,23 +158,12 @@
             lblPortal.Text = " P O R T A L   I N S T I T U C I O N A L ";
             lblPortal.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // lblBienvenidos
-            // 
-            lblBienvenidos.AutoSize = true;
-            lblBienvenidos.Font = new Font("Constantia", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBienvenidos.ForeColor = Color.FromArgb(96, 11, 18);
-            lblBienvenidos.Location = new Point(553, 107);
-            lblBienvenidos.Name = "lblBienvenidos";
-            lblBienvenidos.Size = new Size(187, 42);
-            lblBienvenidos.TabIndex = 1;
-            lblBienvenidos.Text = "Bienvenido";
-            // 
             // lblMensaje
             // 
             lblMensaje.AutoSize = true;
             lblMensaje.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMensaje.ForeColor = Color.FromArgb(107, 92, 85);
-            lblMensaje.Location = new Point(558, 148);
+            lblMensaje.Location = new Point(559, 148);
             lblMensaje.Name = "lblMensaje";
             lblMensaje.Size = new Size(262, 17);
             lblMensaje.TabIndex = 2;
@@ -258,6 +247,7 @@
             linkLabelOlvidoSuContraseña.TabIndex = 9;
             linkLabelOlvidoSuContraseña.TabStop = true;
             linkLabelOlvidoSuContraseña.Text = "¿Olvidaste tu contraseña?";
+            linkLabelOlvidoSuContraseña.LinkClicked += linkLabelOlvidoSuContraseña_LinkClicked;
             // 
             // btnIniciarSesion
             // 
@@ -291,12 +281,24 @@
             picCerrar.TabStop = false;
             picCerrar.Click += pictureBox1_Click;
             // 
+            // lblBienvenido
+            // 
+            lblBienvenido.AutoSize = true;
+            lblBienvenido.Font = new Font("Constantia", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblBienvenido.ForeColor = Color.FromArgb(96, 11, 18);
+            lblBienvenido.Location = new Point(554, 107);
+            lblBienvenido.Name = "lblBienvenido";
+            lblBienvenido.Size = new Size(187, 42);
+            lblBienvenido.TabIndex = 13;
+            lblBienvenido.Text = "Bienvenido";
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(239, 230, 210);
             ClientSize = new Size(940, 580);
+            Controls.Add(lblBienvenido);
             Controls.Add(picCerrar);
             Controls.Add(lblPortal);
             Controls.Add(btnIniciarSesion);
@@ -309,7 +311,7 @@
             Controls.Add(lblUsuario);
             Controls.Add(lblMensaje);
             Controls.Add(pnlPic);
-            Controls.Add(lblBienvenidos);
+            DoubleBuffered = true;
             ForeColor = Color.FromArgb(234, 219, 211);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Login";
@@ -328,7 +330,6 @@
         #endregion
 
         private Panel pnlPic;
-        private Label lblBienvenidos;
         private PictureBox picFondoVinotinto;
         private Label lblComplejoEducativo;
         private Label lblDonRomulo;
@@ -347,5 +348,6 @@
         private LinkLabel linkLabelOlvidoSuContraseña;
         private Krypton.Toolkit.KryptonButton btnIniciarSesion;
         private PictureBox picCerrar;
+        private Label lblBienvenido;
     }
 }

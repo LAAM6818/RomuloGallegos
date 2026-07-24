@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecuperarContraseña));
             picCerrar = new PictureBox();
             lblPortal = new Label();
-            btnEnviarCodigo = new Krypton.Toolkit.KryptonButton();
+            btnRecuperarContraseña = new Krypton.Toolkit.KryptonButton();
             linkIniciarSesion = new LinkLabel();
             txtCorreo = new TextBox();
-            pnlCorreo = new Panel();
-            lblCorreo = new Label();
+            pnlArriba = new Panel();
+            lblEmail = new Label();
             lblMensaje = new Label();
             pnlPic = new Panel();
             lblFrase = new Label();
@@ -46,6 +46,15 @@
             lblComplejoEducativo = new Label();
             picFondoVinotinto = new PictureBox();
             lblRecuperarAcceso = new Label();
+            txtToken = new TextBox();
+            lblToken = new Label();
+            btnVlidarToken = new Krypton.Toolkit.KryptonButton();
+            btnActualizarContraseña = new Krypton.Toolkit.KryptonButton();
+            txtContraseña = new TextBox();
+            txtContraseñaRepetida = new TextBox();
+            lblContraseña = new Label();
+            lblRepetirContraseña = new Label();
+            pnlAbajo = new Panel();
             ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
             pnlPic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
@@ -61,6 +70,7 @@
             picCerrar.SizeMode = PictureBoxSizeMode.AutoSize;
             picCerrar.TabIndex = 24;
             picCerrar.TabStop = false;
+            picCerrar.Click += picCerrar_Click;
             // 
             // lblPortal
             // 
@@ -73,26 +83,27 @@
             lblPortal.Text = " P O R T A L   I N S T I T U C I O N A L ";
             lblPortal.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // btnEnviarCodigo
+            // btnRecuperarContraseña
             // 
-            btnEnviarCodigo.Location = new Point(562, 332);
-            btnEnviarCodigo.Name = "btnEnviarCodigo";
-            btnEnviarCodigo.OverrideDefault.Back.Color1 = Color.FromArgb(82, 26, 27);
-            btnEnviarCodigo.OverrideDefault.Back.Color2 = Color.FromArgb(82, 26, 27);
-            btnEnviarCodigo.Size = new Size(288, 43);
-            btnEnviarCodigo.StateCommon.Back.Color1 = Color.FromArgb(82, 26, 27);
-            btnEnviarCodigo.StateCommon.Back.Color2 = Color.FromArgb(82, 26, 27);
-            btnEnviarCodigo.StateCommon.Border.Color1 = Color.FromArgb(234, 219, 211);
-            btnEnviarCodigo.StateCommon.Border.Color2 = Color.FromArgb(234, 219, 211);
-            btnEnviarCodigo.StateCommon.Content.ShortText.Color1 = Color.FromArgb(234, 219, 211);
-            btnEnviarCodigo.StateCommon.Content.ShortText.Color2 = Color.FromArgb(234, 219, 211);
-            btnEnviarCodigo.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEnviarCodigo.StateCommon.Content.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            btnEnviarCodigo.StatePressed.Back.Color1 = Color.FromArgb(45, 29, 29);
-            btnEnviarCodigo.StatePressed.Back.Color2 = Color.FromArgb(45, 29, 29);
-            btnEnviarCodigo.TabIndex = 23;
-            btnEnviarCodigo.Values.DropDownArrowColor = Color.Empty;
-            btnEnviarCodigo.Values.Text = "ENVIAR CODIGO";
+            btnRecuperarContraseña.Location = new Point(562, 332);
+            btnRecuperarContraseña.Name = "btnRecuperarContraseña";
+            btnRecuperarContraseña.OverrideDefault.Back.Color1 = Color.FromArgb(82, 26, 27);
+            btnRecuperarContraseña.OverrideDefault.Back.Color2 = Color.FromArgb(82, 26, 27);
+            btnRecuperarContraseña.Size = new Size(288, 43);
+            btnRecuperarContraseña.StateCommon.Back.Color1 = Color.FromArgb(82, 26, 27);
+            btnRecuperarContraseña.StateCommon.Back.Color2 = Color.FromArgb(82, 26, 27);
+            btnRecuperarContraseña.StateCommon.Border.Color1 = Color.FromArgb(234, 219, 211);
+            btnRecuperarContraseña.StateCommon.Border.Color2 = Color.FromArgb(234, 219, 211);
+            btnRecuperarContraseña.StateCommon.Content.ShortText.Color1 = Color.FromArgb(234, 219, 211);
+            btnRecuperarContraseña.StateCommon.Content.ShortText.Color2 = Color.FromArgb(234, 219, 211);
+            btnRecuperarContraseña.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRecuperarContraseña.StateCommon.Content.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            btnRecuperarContraseña.StatePressed.Back.Color1 = Color.FromArgb(45, 29, 29);
+            btnRecuperarContraseña.StatePressed.Back.Color2 = Color.FromArgb(45, 29, 29);
+            btnRecuperarContraseña.TabIndex = 23;
+            btnRecuperarContraseña.Values.DropDownArrowColor = Color.Empty;
+            btnRecuperarContraseña.Values.Text = "Recuperar Contraseña";
+            btnRecuperarContraseña.Click += btnRecuperarContraseña_Click;
             // 
             // linkIniciarSesion
             // 
@@ -101,7 +112,7 @@
             linkIniciarSesion.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             linkIniciarSesion.LinkBehavior = LinkBehavior.HoverUnderline;
             linkIniciarSesion.LinkColor = Color.FromArgb(107, 20, 32);
-            linkIniciarSesion.Location = new Point(656, 283);
+            linkIniciarSesion.Location = new Point(648, 284);
             linkIniciarSesion.Name = "linkIniciarSesion";
             linkIniciarSesion.Size = new Size(91, 16);
             linkIniciarSesion.TabIndex = 22;
@@ -120,25 +131,25 @@
             txtCorreo.Size = new Size(286, 22);
             txtCorreo.TabIndex = 13;
             // 
-            // pnlCorreo
+            // pnlArriba
             // 
-            pnlCorreo.BackColor = Color.FromArgb(171, 159, 145);
-            pnlCorreo.ForeColor = Color.FromArgb(171, 159, 145);
-            pnlCorreo.Location = new Point(564, 262);
-            pnlCorreo.Name = "pnlCorreo";
-            pnlCorreo.Size = new Size(285, 2);
-            pnlCorreo.TabIndex = 20;
+            pnlArriba.BackColor = Color.FromArgb(171, 159, 145);
+            pnlArriba.ForeColor = Color.FromArgb(171, 159, 145);
+            pnlArriba.Location = new Point(564, 262);
+            pnlArriba.Name = "pnlArriba";
+            pnlArriba.Size = new Size(285, 2);
+            pnlArriba.TabIndex = 20;
             // 
-            // lblCorreo
+            // lblEmail
             // 
-            lblCorreo.AutoSize = true;
-            lblCorreo.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCorreo.ForeColor = Color.FromArgb(43, 27, 24);
-            lblCorreo.Location = new Point(559, 209);
-            lblCorreo.Name = "lblCorreo";
-            lblCorreo.Size = new Size(56, 20);
-            lblCorreo.TabIndex = 16;
-            lblCorreo.Text = "Correo";
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmail.ForeColor = Color.FromArgb(43, 27, 24);
+            lblEmail.Location = new Point(559, 209);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(46, 20);
+            lblEmail.TabIndex = 16;
+            lblEmail.Text = "Email";
             // 
             // lblMensaje
             // 
@@ -147,9 +158,9 @@
             lblMensaje.ForeColor = Color.FromArgb(107, 92, 85);
             lblMensaje.Location = new Point(559, 148);
             lblMensaje.Name = "lblMensaje";
-            lblMensaje.Size = new Size(262, 17);
+            lblMensaje.Size = new Size(109, 17);
             lblMensaje.TabIndex = 14;
-            lblMensaje.Text = "Ingresa tus datos para acceder al sistema.";
+            lblMensaje.Text = "Rapido y sencillo";
             // 
             // pnlPic
             // 
@@ -254,22 +265,163 @@
             lblRecuperarAcceso.TabIndex = 12;
             lblRecuperarAcceso.Text = "Recuperar Acceso";
             // 
+            // txtToken
+            // 
+            txtToken.BackColor = Color.FromArgb(239, 230, 210);
+            txtToken.BorderStyle = BorderStyle.None;
+            txtToken.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtToken.ForeColor = Color.DimGray;
+            txtToken.Location = new Point(563, 237);
+            txtToken.Name = "txtToken";
+            txtToken.PlaceholderText = "Ingrse el token";
+            txtToken.Size = new Size(286, 22);
+            txtToken.TabIndex = 25;
+            txtToken.Visible = false;
+            // 
+            // lblToken
+            // 
+            lblToken.AutoSize = true;
+            lblToken.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblToken.ForeColor = Color.FromArgb(43, 27, 24);
+            lblToken.Location = new Point(558, 209);
+            lblToken.Name = "lblToken";
+            lblToken.Size = new Size(50, 20);
+            lblToken.TabIndex = 26;
+            lblToken.Text = "Token";
+            lblToken.Visible = false;
+            // 
+            // btnVlidarToken
+            // 
+            btnVlidarToken.Location = new Point(562, 332);
+            btnVlidarToken.Name = "btnVlidarToken";
+            btnVlidarToken.OverrideDefault.Back.Color1 = Color.FromArgb(82, 26, 27);
+            btnVlidarToken.OverrideDefault.Back.Color2 = Color.FromArgb(82, 26, 27);
+            btnVlidarToken.Size = new Size(288, 43);
+            btnVlidarToken.StateCommon.Back.Color1 = Color.FromArgb(82, 26, 27);
+            btnVlidarToken.StateCommon.Back.Color2 = Color.FromArgb(82, 26, 27);
+            btnVlidarToken.StateCommon.Border.Color1 = Color.FromArgb(234, 219, 211);
+            btnVlidarToken.StateCommon.Border.Color2 = Color.FromArgb(234, 219, 211);
+            btnVlidarToken.StateCommon.Content.ShortText.Color1 = Color.FromArgb(234, 219, 211);
+            btnVlidarToken.StateCommon.Content.ShortText.Color2 = Color.FromArgb(234, 219, 211);
+            btnVlidarToken.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVlidarToken.StateCommon.Content.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            btnVlidarToken.StatePressed.Back.Color1 = Color.FromArgb(45, 29, 29);
+            btnVlidarToken.StatePressed.Back.Color2 = Color.FromArgb(45, 29, 29);
+            btnVlidarToken.TabIndex = 27;
+            btnVlidarToken.Values.DropDownArrowColor = Color.Empty;
+            btnVlidarToken.Values.Text = "Validar Token";
+            btnVlidarToken.Visible = false;
+            btnVlidarToken.Click += btnVlidarToken_Click;
+            // 
+            // btnActualizarContraseña
+            // 
+            btnActualizarContraseña.Location = new Point(561, 412);
+            btnActualizarContraseña.Name = "btnActualizarContraseña";
+            btnActualizarContraseña.OverrideDefault.Back.Color1 = Color.FromArgb(82, 26, 27);
+            btnActualizarContraseña.OverrideDefault.Back.Color2 = Color.FromArgb(82, 26, 27);
+            btnActualizarContraseña.Size = new Size(288, 43);
+            btnActualizarContraseña.StateCommon.Back.Color1 = Color.FromArgb(82, 26, 27);
+            btnActualizarContraseña.StateCommon.Back.Color2 = Color.FromArgb(82, 26, 27);
+            btnActualizarContraseña.StateCommon.Border.Color1 = Color.FromArgb(234, 219, 211);
+            btnActualizarContraseña.StateCommon.Border.Color2 = Color.FromArgb(234, 219, 211);
+            btnActualizarContraseña.StateCommon.Content.ShortText.Color1 = Color.FromArgb(234, 219, 211);
+            btnActualizarContraseña.StateCommon.Content.ShortText.Color2 = Color.FromArgb(234, 219, 211);
+            btnActualizarContraseña.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnActualizarContraseña.StateCommon.Content.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            btnActualizarContraseña.StatePressed.Back.Color1 = Color.FromArgb(45, 29, 29);
+            btnActualizarContraseña.StatePressed.Back.Color2 = Color.FromArgb(45, 29, 29);
+            btnActualizarContraseña.TabIndex = 28;
+            btnActualizarContraseña.Values.DropDownArrowColor = Color.Empty;
+            btnActualizarContraseña.Values.Text = "Actualizar";
+            btnActualizarContraseña.Visible = false;
+            btnActualizarContraseña.Click += btnActualizarContraseña_Click;
+            // 
+            // txtContraseña
+            // 
+            txtContraseña.BackColor = Color.FromArgb(239, 230, 210);
+            txtContraseña.BorderStyle = BorderStyle.None;
+            txtContraseña.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtContraseña.ForeColor = Color.DimGray;
+            txtContraseña.Location = new Point(563, 237);
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.PlaceholderText = "Ingrse el token";
+            txtContraseña.Size = new Size(286, 22);
+            txtContraseña.TabIndex = 29;
+            txtContraseña.Visible = false;
+            // 
+            // txtContraseñaRepetida
+            // 
+            txtContraseñaRepetida.BackColor = Color.FromArgb(239, 230, 210);
+            txtContraseñaRepetida.BorderStyle = BorderStyle.None;
+            txtContraseñaRepetida.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtContraseñaRepetida.ForeColor = Color.DimGray;
+            txtContraseñaRepetida.Location = new Point(563, 323);
+            txtContraseñaRepetida.Name = "txtContraseñaRepetida";
+            txtContraseñaRepetida.PlaceholderText = "Ingrse el token";
+            txtContraseñaRepetida.Size = new Size(286, 22);
+            txtContraseñaRepetida.TabIndex = 30;
+            txtContraseñaRepetida.Visible = false;
+            // 
+            // lblContraseña
+            // 
+            lblContraseña.AutoSize = true;
+            lblContraseña.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblContraseña.ForeColor = Color.FromArgb(43, 27, 24);
+            lblContraseña.Location = new Point(558, 209);
+            lblContraseña.Name = "lblContraseña";
+            lblContraseña.Size = new Size(135, 20);
+            lblContraseña.TabIndex = 31;
+            lblContraseña.Text = "Nueva Contraseña";
+            lblContraseña.Visible = false;
+            // 
+            // lblRepetirContraseña
+            // 
+            lblRepetirContraseña.AutoSize = true;
+            lblRepetirContraseña.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRepetirContraseña.ForeColor = Color.FromArgb(43, 27, 24);
+            lblRepetirContraseña.Location = new Point(561, 296);
+            lblRepetirContraseña.Name = "lblRepetirContraseña";
+            lblRepetirContraseña.Size = new Size(193, 20);
+            lblRepetirContraseña.TabIndex = 32;
+            lblRepetirContraseña.Text = "Repita la nueva contraseña";
+            lblRepetirContraseña.Visible = false;
+            // 
+            // pnlAbajo
+            // 
+            pnlAbajo.BackColor = Color.FromArgb(171, 159, 145);
+            pnlAbajo.ForeColor = Color.FromArgb(171, 159, 145);
+            pnlAbajo.Location = new Point(563, 349);
+            pnlAbajo.Name = "pnlAbajo";
+            pnlAbajo.Size = new Size(285, 2);
+            pnlAbajo.TabIndex = 21;
+            pnlAbajo.Visible = false;
+            // 
             // RecuperarContraseña
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(239, 230, 210);
             ClientSize = new Size(940, 580);
+            Controls.Add(pnlAbajo);
+            Controls.Add(lblRepetirContraseña);
+            Controls.Add(lblContraseña);
+            Controls.Add(txtContraseñaRepetida);
+            Controls.Add(txtContraseña);
+            Controls.Add(btnActualizarContraseña);
+            Controls.Add(btnVlidarToken);
+            Controls.Add(lblToken);
+            Controls.Add(txtToken);
             Controls.Add(picCerrar);
             Controls.Add(lblPortal);
-            Controls.Add(btnEnviarCodigo);
+            Controls.Add(btnRecuperarContraseña);
             Controls.Add(linkIniciarSesion);
             Controls.Add(txtCorreo);
-            Controls.Add(pnlCorreo);
-            Controls.Add(lblCorreo);
+            Controls.Add(pnlArriba);
+            Controls.Add(lblEmail);
             Controls.Add(lblMensaje);
             Controls.Add(pnlPic);
             Controls.Add(lblRecuperarAcceso);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "RecuperarContraseña";
             StartPosition = FormStartPosition.CenterScreen;
@@ -288,16 +440,18 @@
 
         private PictureBox picCerrar;
         private Label lblPortal;
-        private Krypton.Toolkit.KryptonButton btnEnviarCodigo;
+        private Krypton.Toolkit.KryptonButton btnRecuperarContraseña;
         private LinkLabel linkIniciarSesion;
         private TextBox txtCorreo;
-        private Panel pnlCorreo;
+        private Panel pnlArriba;
         private TextBox txtUsuario;
         private TextBox txtContraseña;
         private Panel pnlContraseña;
         private Panel pnlUsuario;
         private Label lblContraseña;
-        private Label lblCorreo;
+        private Label lblRepetirContraseña;
+        private Panel pnlAbajo;
+        private Label lblEmail;
         private Label lblMensaje;
         private Panel pnlPic;
         private Label lblFrase;
@@ -308,5 +462,10 @@
         private Label lblComplejoEducativo;
         private PictureBox picFondoVinotinto;
         private Label lblRecuperarAcceso;
+        private TextBox txtToken;
+        private Label lblToken;
+        private Krypton.Toolkit.KryptonButton btnVlidarToken;
+        private Krypton.Toolkit.KryptonButton btnActualizarContraseña;
+        private TextBox txtContraseñaRepetida;
     }
 }
