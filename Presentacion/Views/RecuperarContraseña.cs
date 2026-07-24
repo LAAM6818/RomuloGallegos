@@ -10,13 +10,12 @@ using System.Windows.Forms;
 
 namespace Presentacion.Views
 {
-    public partial class Login : Form
+    public partial class RecuperarContraseña : Form
     {
-        public Login()
+        public RecuperarContraseña()
         {
             InitializeComponent();
 
-            lblBienvenidos.Focus();
 
 
             lblComplejoEducativo.Parent = picFondoVinotinto;
@@ -37,23 +36,12 @@ namespace Presentacion.Views
             lblFrase.Parent = picFondoVinotinto;
             lblFrase.BackColor = Color.Transparent;
 
-            //lblSanFernando.Parent = picFondoVinotinto;
-            //lblSanFernando.BackColor = Color.Transparent;
-
-
-
-
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void RecuperarContraseña_Load(object sender, EventArgs e)
         {
-            this.ActiveControl = lblBienvenidos;
-        }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Application.Exit();
+            this.ActiveControl = lblRecuperarAcceso;
         }
     }
 }

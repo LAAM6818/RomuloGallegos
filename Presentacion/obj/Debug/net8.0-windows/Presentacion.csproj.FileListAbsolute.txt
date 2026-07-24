@@ -24,3 +24,4 @@ C:\Users\Luisa\source\repos\RomuloGallegos\Presentacion\obj\Debug\net8.0-windows
 C:\Users\Luisa\source\repos\RomuloGallegos\Presentacion\obj\Debug\net8.0-windows\Presentacion.pdb
 C:\Users\Luisa\source\repos\RomuloGallegos\Presentacion\obj\Debug\net8.0-windows\Presentacion.genruntimeconfig.cache
 C:\Users\Luisa\source\repos\RomuloGallegos\Presentacion\obj\Debug\net8.0-windows\ref\Presentacion.dll
+C:\Users\Luisa\source\repos\RomuloGallegos\Presentacion\obj\Debug\net8.0-windows\Presentacion.Views.RecuperarContraseña.resources

@@ -35,7 +35,7 @@
             picLogo = new PictureBox();
             lblGallegos = new Label();
             lblDonRomulo = new Label();
-            lblCE = new Label();
+            lblComplejoEducativo = new Label();
             picFondoVinotinto = new PictureBox();
             lblPortal = new Label();
             lblBienvenidos = new Label();
@@ -63,7 +63,7 @@
             pnlPic.Controls.Add(picLogo);
             pnlPic.Controls.Add(lblGallegos);
             pnlPic.Controls.Add(lblDonRomulo);
-            pnlPic.Controls.Add(lblCE);
+            pnlPic.Controls.Add(lblComplejoEducativo);
             pnlPic.Controls.Add(picFondoVinotinto);
             pnlPic.Dock = DockStyle.Left;
             pnlPic.Location = new Point(0, 0);
@@ -125,16 +125,16 @@
             lblDonRomulo.TabIndex = 2;
             lblDonRomulo.Text = "Don Rómulo";
             // 
-            // lblCE
+            // lblComplejoEducativo
             // 
-            lblCE.AutoSize = true;
-            lblCE.Font = new Font("Constantia", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCE.ForeColor = Color.FromArgb(250, 246, 236);
-            lblCE.Location = new Point(99, 284);
-            lblCE.Name = "lblCE";
-            lblCE.Size = new Size(267, 36);
-            lblCE.TabIndex = 1;
-            lblCE.Text = "Complejo Educativo";
+            lblComplejoEducativo.AutoSize = true;
+            lblComplejoEducativo.Font = new Font("Constantia", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblComplejoEducativo.ForeColor = Color.FromArgb(250, 246, 236);
+            lblComplejoEducativo.Location = new Point(99, 284);
+            lblComplejoEducativo.Name = "lblComplejoEducativo";
+            lblComplejoEducativo.Size = new Size(267, 36);
+            lblComplejoEducativo.TabIndex = 1;
+            lblComplejoEducativo.Text = "Complejo Educativo";
             // 
             // picFondoVinotinto
             // 
@@ -330,7 +330,7 @@
         private Panel pnlPic;
         private Label lblBienvenidos;
         private PictureBox picFondoVinotinto;
-        private Label lblCE;
+        private Label lblComplejoEducativo;
         private Label lblDonRomulo;
         private Label lblGallegos;
         private PictureBox picLogo;
