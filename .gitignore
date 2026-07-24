@@ -1,3 +1,6 @@
-./**/bin
-./**/obj
-./**/.vs 
+# Visual Studio / .NET
+[Oo]bj/
+[Bb]in/
+.vs/
+*.user
+*.suo

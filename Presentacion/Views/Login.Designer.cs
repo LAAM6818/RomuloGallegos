@@ -37,22 +37,22 @@
             lblDonRomulo = new Label();
             lblCE = new Label();
             picFondoVinotinto = new PictureBox();
-            lblSanFernando = new Label();
+            lblPortal = new Label();
             lblBienvenidos = new Label();
-            label1 = new Label();
+            lblMensaje = new Label();
             lblUsuario = new Label();
             lblContraseña = new Label();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            linkLabel1 = new LinkLabel();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
-            pictureBox1 = new PictureBox();
+            pnlUsuario = new Panel();
+            pnlContraseña = new Panel();
+            txtContraseña = new TextBox();
+            txtUsuario = new TextBox();
+            linkLabelOlvidoSuContraseña = new LinkLabel();
+            btnIniciarSesion = new Krypton.Toolkit.KryptonButton();
+            picCerrar = new PictureBox();
             pnlPic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picFondoVinotinto).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picCerrar).BeginInit();
             SuspendLayout();
             // 
             // pnlPic
@@ -75,7 +75,7 @@
             // 
             lblFrase.Font = new Font("Constantia", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             lblFrase.ForeColor = Color.FromArgb(234, 219, 211);
-            lblFrase.Location = new Point(35, 397);
+            lblFrase.Location = new Point(34, 424);
             lblFrase.Name = "lblFrase";
             lblFrase.Size = new Size(396, 51);
             lblFrase.TabIndex = 4;
@@ -87,11 +87,11 @@
             lblColegioEducativo.AutoSize = true;
             lblColegioEducativo.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblColegioEducativo.ForeColor = Color.FromArgb(216, 192, 136);
-            lblColegioEducativo.Location = new Point(129, 249);
+            lblColegioEducativo.Location = new Point(114, 241);
             lblColegioEducativo.Name = "lblColegioEducativo";
-            lblColegioEducativo.Size = new Size(203, 15);
+            lblColegioEducativo.Size = new Size(234, 15);
             lblColegioEducativo.TabIndex = 0;
-            lblColegioEducativo.Text = "C O L E G I O   D E   E D U C A C I Ó N";
+            lblColegioEducativo.Text = "I N S T I T U C I Ó N   D E   E D U C A T I V A";
             // 
             // picLogo
             // 
@@ -107,8 +107,8 @@
             // 
             lblGallegos.AutoSize = true;
             lblGallegos.Font = new Font("Constantia", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblGallegos.ForeColor = Color.FromArgb(250, 246, 236);
-            lblGallegos.Location = new Point(165, 319);
+            lblGallegos.ForeColor = Color.FromArgb(216, 192, 136);
+            lblGallegos.Location = new Point(162, 355);
             lblGallegos.Name = "lblGallegos";
             lblGallegos.Size = new Size(133, 36);
             lblGallegos.TabIndex = 3;
@@ -119,7 +119,7 @@
             lblDonRomulo.AutoSize = true;
             lblDonRomulo.Font = new Font("Constantia", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDonRomulo.ForeColor = Color.FromArgb(216, 192, 136);
-            lblDonRomulo.Location = new Point(169, 280);
+            lblDonRomulo.Location = new Point(136, 319);
             lblDonRomulo.Name = "lblDonRomulo";
             lblDonRomulo.Size = new Size(190, 36);
             lblDonRomulo.TabIndex = 2;
@@ -130,11 +130,11 @@
             lblCE.AutoSize = true;
             lblCE.Font = new Font("Constantia", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCE.ForeColor = Color.FromArgb(250, 246, 236);
-            lblCE.Location = new Point(104, 280);
+            lblCE.Location = new Point(99, 284);
             lblCE.Name = "lblCE";
-            lblCE.Size = new Size(65, 36);
+            lblCE.Size = new Size(267, 36);
             lblCE.TabIndex = 1;
-            lblCE.Text = "C.E.";
+            lblCE.Text = "Complejo Educativo";
             // 
             // picFondoVinotinto
             // 
@@ -147,45 +147,45 @@
             picFondoVinotinto.TabIndex = 0;
             picFondoVinotinto.TabStop = false;
             // 
-            // lblSanFernando
+            // lblPortal
             // 
-            lblSanFernando.AutoSize = true;
-            lblSanFernando.Font = new Font("Arial", 9F, FontStyle.Bold);
-            lblSanFernando.ForeColor = Color.Gray;
-            lblSanFernando.Location = new Point(620, 539);
-            lblSanFernando.Name = "lblSanFernando";
-            lblSanFernando.Size = new Size(207, 15);
-            lblSanFernando.TabIndex = 5;
-            lblSanFernando.Text = " P O R T A L   I N S T I T U C I O N A L ";
+            lblPortal.Font = new Font("Arial", 9F, FontStyle.Bold);
+            lblPortal.ForeColor = Color.Gray;
+            lblPortal.Location = new Point(472, 539);
+            lblPortal.Name = "lblPortal";
+            lblPortal.Size = new Size(467, 15);
+            lblPortal.TabIndex = 5;
+            lblPortal.Text = " P O R T A L   I N S T I T U C I O N A L ";
+            lblPortal.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblBienvenidos
             // 
             lblBienvenidos.AutoSize = true;
             lblBienvenidos.Font = new Font("Constantia", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBienvenidos.ForeColor = Color.FromArgb(96, 11, 18);
-            lblBienvenidos.Location = new Point(563, 104);
+            lblBienvenidos.Location = new Point(553, 107);
             lblBienvenidos.Name = "lblBienvenidos";
             lblBienvenidos.Size = new Size(187, 42);
             lblBienvenidos.TabIndex = 1;
             lblBienvenidos.Text = "Bienvenido";
             // 
-            // label1
+            // lblMensaje
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(107, 92, 85);
-            label1.Location = new Point(568, 145);
-            label1.Name = "label1";
-            label1.Size = new Size(262, 17);
-            label1.TabIndex = 2;
-            label1.Text = "Ingresa tus datos para acceder al sistema.";
+            lblMensaje.AutoSize = true;
+            lblMensaje.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMensaje.ForeColor = Color.FromArgb(107, 92, 85);
+            lblMensaje.Location = new Point(558, 148);
+            lblMensaje.Name = "lblMensaje";
+            lblMensaje.Size = new Size(262, 17);
+            lblMensaje.TabIndex = 2;
+            lblMensaje.Text = "Ingresa tus datos para acceder al sistema.";
             // 
             // lblUsuario
             // 
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUsuario.ForeColor = Color.FromArgb(43, 27, 24);
-            lblUsuario.Location = new Point(568, 206);
+            lblUsuario.Location = new Point(558, 209);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(62, 20);
             lblUsuario.TabIndex = 3;
@@ -196,95 +196,100 @@
             lblContraseña.AutoSize = true;
             lblContraseña.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblContraseña.ForeColor = Color.FromArgb(43, 27, 24);
-            lblContraseña.Location = new Point(571, 293);
+            lblContraseña.Location = new Point(561, 296);
             lblContraseña.Name = "lblContraseña";
             lblContraseña.Size = new Size(86, 20);
             lblContraseña.TabIndex = 5;
             lblContraseña.Text = "Contraseña";
             // 
-            // panel1
+            // pnlUsuario
             // 
-            panel1.BackColor = Color.FromArgb(171, 159, 145);
-            panel1.ForeColor = Color.FromArgb(171, 159, 145);
-            panel1.Location = new Point(573, 259);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(286, 2);
-            panel1.TabIndex = 6;
+            pnlUsuario.BackColor = Color.FromArgb(171, 159, 145);
+            pnlUsuario.ForeColor = Color.FromArgb(171, 159, 145);
+            pnlUsuario.Location = new Point(563, 262);
+            pnlUsuario.Name = "pnlUsuario";
+            pnlUsuario.Size = new Size(285, 2);
+            pnlUsuario.TabIndex = 6;
             // 
-            // panel2
+            // pnlContraseña
             // 
-            panel2.BackColor = Color.FromArgb(171, 159, 145);
-            panel2.ForeColor = Color.FromArgb(171, 159, 145);
-            panel2.Location = new Point(573, 346);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(286, 2);
-            panel2.TabIndex = 4;
+            pnlContraseña.BackColor = Color.FromArgb(171, 159, 145);
+            pnlContraseña.ForeColor = Color.FromArgb(171, 159, 145);
+            pnlContraseña.Location = new Point(563, 349);
+            pnlContraseña.Name = "pnlContraseña";
+            pnlContraseña.Size = new Size(285, 2);
+            pnlContraseña.TabIndex = 4;
             // 
-            // textBox1
+            // txtContraseña
             // 
-            textBox1.BackColor = Color.FromArgb(239, 230, 210);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.DimGray;
-            textBox1.Location = new Point(573, 320);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "* * * * * * * * ";
-            textBox1.Size = new Size(286, 22);
-            textBox1.TabIndex = 3;
-            textBox1.UseSystemPasswordChar = true;
+            txtContraseña.BackColor = Color.FromArgb(239, 230, 210);
+            txtContraseña.BorderStyle = BorderStyle.None;
+            txtContraseña.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtContraseña.ForeColor = Color.DimGray;
+            txtContraseña.Location = new Point(563, 323);
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.PlaceholderText = "* * * * * * * * ";
+            txtContraseña.Size = new Size(286, 22);
+            txtContraseña.TabIndex = 3;
+            txtContraseña.UseSystemPasswordChar = true;
             // 
-            // textBox2
+            // txtUsuario
             // 
-            textBox2.BackColor = Color.FromArgb(239, 230, 210);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.ForeColor = Color.DimGray;
-            textBox2.Location = new Point(573, 234);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "usuario";
-            textBox2.Size = new Size(286, 22);
-            textBox2.TabIndex = 2;
+            txtUsuario.BackColor = Color.FromArgb(239, 230, 210);
+            txtUsuario.BorderStyle = BorderStyle.None;
+            txtUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsuario.ForeColor = Color.DimGray;
+            txtUsuario.Location = new Point(563, 237);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.PlaceholderText = "usuario";
+            txtUsuario.Size = new Size(286, 22);
+            txtUsuario.TabIndex = 2;
             // 
-            // linkLabel1
+            // linkLabelOlvidoSuContraseña
             // 
-            linkLabel1.ActiveLinkColor = Color.FromArgb(107, 20, 32);
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            linkLabel1.LinkColor = Color.FromArgb(107, 20, 32);
-            linkLabel1.Location = new Point(635, 370);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(172, 16);
-            linkLabel1.TabIndex = 9;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "¿Olvidaste tu contraseña?";
+            linkLabelOlvidoSuContraseña.ActiveLinkColor = Color.FromArgb(107, 20, 32);
+            linkLabelOlvidoSuContraseña.AutoSize = true;
+            linkLabelOlvidoSuContraseña.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            linkLabelOlvidoSuContraseña.LinkBehavior = LinkBehavior.HoverUnderline;
+            linkLabelOlvidoSuContraseña.LinkColor = Color.FromArgb(107, 20, 32);
+            linkLabelOlvidoSuContraseña.Location = new Point(617, 370);
+            linkLabelOlvidoSuContraseña.Name = "linkLabelOlvidoSuContraseña";
+            linkLabelOlvidoSuContraseña.Size = new Size(172, 16);
+            linkLabelOlvidoSuContraseña.TabIndex = 9;
+            linkLabelOlvidoSuContraseña.TabStop = true;
+            linkLabelOlvidoSuContraseña.Text = "¿Olvidaste tu contraseña?";
             // 
-            // kryptonButton1
+            // btnIniciarSesion
             // 
-            kryptonButton1.Location = new Point(571, 412);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(288, 43);
-            kryptonButton1.StateCommon.Back.Color1 = Color.FromArgb(82, 26, 27);
-            kryptonButton1.StateCommon.Back.Color2 = Color.FromArgb(82, 26, 27);
-            kryptonButton1.StateCommon.Border.Color1 = Color.FromArgb(234, 219, 211);
-            kryptonButton1.StateCommon.Border.Color2 = Color.FromArgb(234, 219, 211);
-            kryptonButton1.StateCommon.Content.ShortText.Color1 = Color.FromArgb(234, 219, 211);
-            kryptonButton1.StateCommon.Content.ShortText.Color2 = Color.FromArgb(234, 219, 211);
-            kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonButton1.StateCommon.Content.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            kryptonButton1.TabIndex = 10;
-            kryptonButton1.Values.DropDownArrowColor = Color.Empty;
-            kryptonButton1.Values.Text = "INICIAR SESIÓN";
+            btnIniciarSesion.Location = new Point(561, 412);
+            btnIniciarSesion.Name = "btnIniciarSesion";
+            btnIniciarSesion.OverrideDefault.Back.Color1 = Color.FromArgb(82, 26, 27);
+            btnIniciarSesion.OverrideDefault.Back.Color2 = Color.FromArgb(82, 26, 27);
+            btnIniciarSesion.Size = new Size(288, 43);
+            btnIniciarSesion.StateCommon.Back.Color1 = Color.FromArgb(82, 26, 27);
+            btnIniciarSesion.StateCommon.Back.Color2 = Color.FromArgb(82, 26, 27);
+            btnIniciarSesion.StateCommon.Border.Color1 = Color.FromArgb(234, 219, 211);
+            btnIniciarSesion.StateCommon.Border.Color2 = Color.FromArgb(234, 219, 211);
+            btnIniciarSesion.StateCommon.Content.ShortText.Color1 = Color.FromArgb(234, 219, 211);
+            btnIniciarSesion.StateCommon.Content.ShortText.Color2 = Color.FromArgb(234, 219, 211);
+            btnIniciarSesion.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnIniciarSesion.StateCommon.Content.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            btnIniciarSesion.StatePressed.Back.Color1 = Color.FromArgb(45, 29, 29);
+            btnIniciarSesion.StatePressed.Back.Color2 = Color.FromArgb(45, 29, 29);
+            btnIniciarSesion.TabIndex = 10;
+            btnIniciarSesion.Values.DropDownArrowColor = Color.Empty;
+            btnIniciarSesion.Values.Text = "INICIAR SESIÓN";
             // 
-            // pictureBox1
+            // picCerrar
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(910, 6);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(24, 24);
-            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            picCerrar.Image = (Image)resources.GetObject("picCerrar.Image");
+            picCerrar.Location = new Point(910, 6);
+            picCerrar.Name = "picCerrar";
+            picCerrar.Size = new Size(24, 24);
+            picCerrar.SizeMode = PictureBoxSizeMode.AutoSize;
+            picCerrar.TabIndex = 11;
+            picCerrar.TabStop = false;
+            picCerrar.Click += pictureBox1_Click;
             // 
             // Login
             // 
@@ -292,17 +297,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(239, 230, 210);
             ClientSize = new Size(940, 580);
-            Controls.Add(pictureBox1);
-            Controls.Add(lblSanFernando);
-            Controls.Add(kryptonButton1);
-            Controls.Add(linkLabel1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(picCerrar);
+            Controls.Add(lblPortal);
+            Controls.Add(btnIniciarSesion);
+            Controls.Add(linkLabelOlvidoSuContraseña);
+            Controls.Add(txtUsuario);
+            Controls.Add(txtContraseña);
+            Controls.Add(pnlContraseña);
+            Controls.Add(pnlUsuario);
             Controls.Add(lblContraseña);
             Controls.Add(lblUsuario);
-            Controls.Add(label1);
+            Controls.Add(lblMensaje);
             Controls.Add(pnlPic);
             Controls.Add(lblBienvenidos);
             ForeColor = Color.FromArgb(234, 219, 211);
@@ -315,7 +320,7 @@
             pnlPic.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)picFondoVinotinto).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picCerrar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -331,16 +336,16 @@
         private PictureBox picLogo;
         private Label lblColegioEducativo;
         private Label lblFrase;
-        private Label lblSanFernando;
-        private Label label1;
+        private Label lblPortal;
+        private Label lblMensaje;
         private Label lblUsuario;
         private Label lblContraseña;
-        private Panel panel1;
-        private Panel panel2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private LinkLabel linkLabel1;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
-        private PictureBox pictureBox1;
+        private Panel pnlUsuario;
+        private Panel pnlContraseña;
+        private TextBox txtContraseña;
+        private TextBox txtUsuario;
+        private LinkLabel linkLabelOlvidoSuContraseña;
+        private Krypton.Toolkit.KryptonButton btnIniciarSesion;
+        private PictureBox picCerrar;
     }
 }
